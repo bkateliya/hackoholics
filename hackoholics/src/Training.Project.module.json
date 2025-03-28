@@ -1,0 +1,43 @@
+{
+    "namespace": "Training.Project.Serilization",
+	"references": [
+    "Training.Foundation.Serilization",
+    "Training.Feature.Serilization"
+    ],
+    "items": {
+      "includes": [
+	    {
+          "name": "Project-templates",
+          "path": "/sitecore/templates/Project/Training",
+          "allowedPushOperations": "CreateUpdateAndDelete"
+        },
+      {
+          "name": "Project-components",
+          "path": "/sitecore/layout/Renderings/Project/Training",
+          "allowedPushOperations": "CreateUpdateAndDelete"
+        },
+        {
+          "name": "Project-placeholders",
+          "path": "/sitecore/layout/Placeholder Settings/Project/Training",
+          "allowedPushOperations": "CreateUpdateAndDelete"
+        },
+        {
+          "name": "Project-media",
+          "path": "/sitecore/Media Library/Project/Training",
+          "allowedPushOperations": "createOnly"
+        },
+        {
+          "name": "Project-modules",
+          "path": "/sitecore/system/Settings/Project/Training",
+          "allowedPushOperations": "CreateUpdateAndDelete"
+        },
+		    {
+          "name": "Project-content",
+          "path": "/sitecore/content/Training",
+          "allowedPushOperations": "createOnly"
+        }
+      ]
+    }
+  }
+  
+  
