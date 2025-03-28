@@ -1,0 +1,40 @@
+﻿---
+ID: "9c166a1a-2f97-46cc-ae6b-d977f2f90b4c"
+Parent: "231dac72-0ec0-4d9d-a795-1c43a4d97588"
+Template: "231dac72-0ec0-4d9d-a795-1c43a4d97588"
+Path: /sitecore/templates/Project/Training/Page/__Standard Values
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Value: |
+    {231DAC72-0EC0-4D9D-A795-1C43A4D97588}
+    {C14B6289-8AC2-439C-9E5B-40DE9F820C3F}
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20240814T065509Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\dnanavati@horizontal.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\dnanavati@horizontal.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "ab71a7fe-4bca-424b-a022-37d7709cb6a6"
+    - ID: "8ce1fac1-d44d-4a3b-bdf5-16ca4a90845c"
+      Hint: Title
+      Value: $name
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\dnanavati@horizontal.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20240814T065514Z

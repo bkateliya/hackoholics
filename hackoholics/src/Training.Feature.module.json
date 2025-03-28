@@ -1,0 +1,22 @@
+{
+    "namespace": "Training.Feature.Serilization",
+	"references": [
+    "Training.Foundation.Serilization"
+    ],
+    "items": {
+      "includes": [
+	    {
+          "name": "Feature-templates",
+          "path": "/sitecore/templates/Feature/Training",
+          "allowedPushOperations": "createAndUpdate"
+        },
+        {
+          "name": "Feature-modules",
+          "path": "/sitecore/system/Settings/Feature/Training",
+          "allowedPushOperations": "createAndUpdate"
+        }
+      ]
+    }
+  }
+  
+  

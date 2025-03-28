@@ -1,0 +1,25 @@
+{
+    "namespace": "Training.Foundation.Serilization",
+    "items": {
+      "includes": [
+	    {
+          "name": "Foundation-templates",
+          "path": "/sitecore/templates/Foundation/Training",
+          "allowedPushOperations": "CreateUpdateAndDelete"
+        },
+
+        {
+          "name": "Foundation-modules",
+          "path": "/sitecore/system/Settings/Foundation/Training",
+          "allowedPushOperations": "CreateUpdateAndDelete"
+        },
+        {
+          "name": "Foundation-apikey",
+          "path": "/sitecore/system/Settings/Services/API Keys/Training API",
+          "allowedPushOperations": "createOnly"
+        }
+      ]
+    }
+  }
+  
+  
