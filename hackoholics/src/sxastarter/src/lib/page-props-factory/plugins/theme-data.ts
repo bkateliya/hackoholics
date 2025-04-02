@@ -3,7 +3,6 @@ import { SitecorePageProps } from 'lib/page-props';
 import { GetServerSidePropsContext, GetStaticPropsContext } from 'next';
 import { Plugin } from '..';
 import { getOtherSettingsData, ThemeSettingsData } from '../graphql/themeSettings';
-import { getOrSetCache } from 'lib/utils/cache-helper';
 
 class ThemeDataPlugin implements Plugin {
   order = 1.5;
@@ -12,13 +11,13 @@ class ThemeDataPlugin implements Plugin {
     props: SitecorePageProps,
     _context: GetServerSidePropsContext | GetStaticPropsContext
   ) {
-    const siteName = props.site.name;
-    const language = props.layoutData.sitecore.context.language ?? 'en';
+    // const siteName = props.site.name;
+    // const language = props.layoutData.sitecore.context.language ?? 'en';
 
-    const cacheKey = `ThemeDataPlugin:${siteName}:${language}`;
-    const [themeSettings] = await getOrSetCache(cacheKey, () =>
-      Promise.all([getOtherSettingsData()])
-    );
+    // const cacheKey = `ThemeDataPlugin:${siteName}:${language}`;
+
+    // Bypass cache to always fetch fresh data
+    const [themeSettings] = await Promise.all([getOtherSettingsData()]);
 
     props.layoutData.sitecore.context.graphQlData = {
       themeSettings,

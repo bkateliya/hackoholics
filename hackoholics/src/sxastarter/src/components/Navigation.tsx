@@ -90,6 +90,7 @@ export const Default = (props: NavigationProps): JSX.Element => {
   return (
     <div className={`component navigation ${styles}`} id={id ? id : undefined}>
       <label className="menu-mobile-navigate-wrapper">
+        <div className="text-colorprimary">DSFDF</div>
         <div style={{ color: 'var(--main-bg-color)' }}>Site title</div>
         <input
           type="checkbox"
