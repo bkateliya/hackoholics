@@ -14,6 +14,7 @@ import { SitecorePageProps } from 'lib/page-props';
 import { sitecorePagePropsFactory } from 'lib/page-props-factory';
 import { componentBuilder } from 'temp/componentBuilder';
 import { sitemapFetcher } from 'lib/sitemap-fetcher';
+import StyleData from 'src/helpers/themedata/themedata';
 
 const SitecorePage = ({
   notFound,
@@ -45,6 +46,7 @@ const SitecorePage = ({
           Sitecore Pages supports component rendering to avoid refreshing the entire page during component editing.
           If you are using Experience Editor only, this logic can be removed, Layout can be left.
         */}
+        {!isEditing && <StyleData />}
         {isComponentRendering ? (
           <EditingComponentPlaceholder rendering={layoutData.sitecore.route} />
         ) : (
