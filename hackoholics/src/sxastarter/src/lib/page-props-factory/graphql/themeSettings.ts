@@ -1,5 +1,5 @@
 import graphqlClientFactory from 'lib/graphql-client-factory';
-
+import config from 'temp/config';
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export type ThemeSettingsData = Record<string, any>;
 
@@ -20,8 +20,12 @@ type themeSettingsGraphQLResponse = {
     };
   };
 };
+// {7E37B866-FCBB-4528-847B-773ACB294262}
+// ThemeStyle;
+const siteName = config.sitecoreSiteName;
+
 const otherSettingGraphQl = `query {
-  item(language:"en",path:"{7E37B866-FCBB-4528-847B-773ACB294262}"){
+  item(language:"en",path:"/sitecore/content/XMCHackoholics/${siteName}/Settings/ThemeStyle"){
     field(name:"style"){
       name
       value
