@@ -27,7 +27,7 @@ const Header: React.FC = () => {
         {/* Logo */}
         <div className="flex items-center space-x-2">
           <span className="text-neutral1 text-[22px] font-extrabold tracking-wide font-monteserrate">
-            Hackholics 1
+            Hackholics
           </span>
         </div>
 
