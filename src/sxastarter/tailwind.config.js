@@ -5,7 +5,7 @@ module.exports = {
   "theme": {
     "extend": {
       "colors": {
-        "custom-blue": "#D9E506",
+        "custom-blue": "#00C6D7",
         "custom-green": "#38C172"
       },
       "fontSize": {
