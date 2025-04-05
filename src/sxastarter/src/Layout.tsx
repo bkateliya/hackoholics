@@ -29,6 +29,7 @@ const Layout = ({ layoutData, headLinks }: LayoutProps): JSX.Element => {
 
   return (
     <>
+      <h1 className="text-custom-blue">Header</h1>
       <Scripts />
       <Head>
         <title>{fields?.Title?.value?.toString() || 'Page'}</title>
