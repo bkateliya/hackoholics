@@ -1,1 +1,4 @@
-"{    colors: {      'custom-blue': '#088F8F',      'custom-green': '#38C172',    },    fontSize: {      xxl: '2rem',      sm: '0.875rem',    },  }"
+{
+  "colors": { "custom-blue": "#088F8F", "custom-green": "#38C172" },
+  "fontSize": { "xxl": "2rem", "sm": "0.875rem" }
+}

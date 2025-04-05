@@ -34,7 +34,7 @@ class ThemeDataPlugin implements Plugin {
       const configPath = path.resolve(process.cwd(), 'data', 'tailwind-config.json');
 
       // Write the data to the JSON file
-      fs.writeFileSync(configPath, JSON.stringify(JSON.parse(configData), null, 2));
+      fs.writeFileSync(configPath, JSON.parse(configData));
     } catch {
       console.log('FILE ERROR');
     }
