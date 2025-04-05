@@ -1,4 +1,5 @@
 import type { AppProps } from 'next/app';
+import Head from 'next/head';
 import { I18nProvider } from 'next-localization';
 import { SitecorePageProps } from 'lib/page-props';
 import Bootstrap from 'src/Bootstrap';
@@ -10,12 +11,17 @@ function App({ Component, pageProps }: AppProps<SitecorePageProps>): JSX.Element
 
   return (
     <>
+      {/* Google Font: Montserrat */}
+      <Head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+          rel="stylesheet"
+        />
+      </Head>
+
       <Bootstrap {...pageProps} />
-      {/*
-        // Use the next-localization (w/ rosetta) library to provide our translation dictionary to the app.
-        // Note Next.js does not (currently) provide anything for translation, only i18n routing.
-        // If your app is not multilingual, next-localization and references to it can be removed.
-      */}
       <I18nProvider lngDict={dictionary} locale={pageProps.locale}>
         <Component {...rest} />
       </I18nProvider>
