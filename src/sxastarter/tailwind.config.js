@@ -12,15 +12,15 @@ module.exports = {
         "xs": "375px"
       },
       "colors": {
-        "primary1": "#3B6D28",
-        "neutral1": "#F8F5F0",
-        "neutral6": "#4C3C25",
-        "gray9": "#2A2B2D",
-        "gray7": "#585858",
-        "gray6": "#787878",
-        "gray3": "#D1D1D1",
-        "gray5": "#9E9E9E",
-        "gray2": "#F4F4F4"
+        "primary1": "#FF6B6B",
+        "neutral1": "#F0F4F8",
+        "neutral6": "#3B3A3A",
+        "gray9": "#D1D7DC",
+        "gray7": "#B1B6B6",
+        "gray6": "#A3A3A3",
+        "gray3": "#E8E8E8",
+        "gray5": "#A8A8A8",
+        "gray2": "#F5F5F5"
       },
       "fontFamily": {
         "monteserrate": [
