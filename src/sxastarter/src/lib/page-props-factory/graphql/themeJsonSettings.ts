@@ -3,7 +3,7 @@ import config from 'temp/config';
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export type ThemeSettingsData = Record<string, any>;
 
-export async function getOtherSettingsData(): Promise<ThemeSettingsData> {
+export async function getJsonSettingsData(): Promise<ThemeSettingsData> {
   const gqlClient = graphqlClientFactory({});
   const response = await gqlClient.request<themeSettingsGraphQLResponse>(otherSettingGraphQl);
 
@@ -27,7 +27,7 @@ const siteName = config.sitecoreSiteName;
 
 const otherSettingGraphQl = `query {
   item(language:"en",path:"/sitecore/content/XMCHackoholics/${siteName}/Settings/ThemeStyle"){
-    field(name:"style"){
+    field(name:"Json"){
       name
       value
     }
