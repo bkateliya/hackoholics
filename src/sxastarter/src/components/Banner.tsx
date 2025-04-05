@@ -56,4 +56,3 @@ const Banner = ({ fields }: BannerProps) => {
 };
 
 export default Banner;
-

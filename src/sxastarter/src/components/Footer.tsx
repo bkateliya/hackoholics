@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
+// import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
 
 const Footer: React.FC = () => {
   return (
@@ -20,28 +20,28 @@ const Footer: React.FC = () => {
               aria-label="Facebook"
               className="text-neutral1 hover:text-gray-300 transition-colors duration-200"
             >
-              <FaFacebookF className="w-8 h-8" />
+              {/* <FaFacebookF className="w-8 h-8" /> */}
             </a>
             <a
               href="#"
               aria-label="Twitter"
               className="text-neutral1 hover:text-gray-300 transition-colors duration-200"
             >
-              <FaTwitter className="w-8 h-8" />
+              {/* <FaTwitter className="w-8 h-8" /> */}
             </a>
             <a
               href="#"
               aria-label="Instagram"
               className="text-neutral1 hover:text-gray-300 transition-colors duration-200"
             >
-              <FaInstagram className="w-8 h-8" />
+              {/* <FaInstagram className="w-8 h-8" /> */}
             </a>
             <a
               href="#"
               aria-label="LinkedIn"
               className="text-neutral1 hover:text-gray-300 transition-colors duration-200"
             >
-              <FaLinkedinIn className="w-8 h-8" />
+              {/* <FaLinkedinIn className="w-8 h-8" /> */}
             </a>
           </div>
         </div>
@@ -56,4 +56,3 @@ const Footer: React.FC = () => {
 };
 
 export default Footer;
-

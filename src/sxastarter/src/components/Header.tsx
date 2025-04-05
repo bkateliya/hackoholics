@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { MdOutlineSegment } from 'react-icons/md';
-import { IoMdClose } from 'react-icons/io';
+// import { MdOutlineSegment } from 'react-icons/md';
+// import { IoMdClose } from 'react-icons/io';
 
 // Sample structure for Sitecore navigation data
 interface NavItem {
@@ -49,7 +49,7 @@ const Header: React.FC = () => {
           className="md:hidden text-neutral1 focus:outline-none"
           onClick={() => setIsOpen(!isOpen)}
         >
-          <MdOutlineSegment className="w-12 h-12" />
+          Open
         </button>
       </div>
 
@@ -72,7 +72,7 @@ const Header: React.FC = () => {
               className="text-neutral1 text-lg font-medium mt-6"
               onClick={() => setIsOpen(false)}
             >
-              <IoMdClose className="w-12 h-12" />
+              Close
             </button>
           </div>
         </div>
@@ -82,4 +82,3 @@ const Header: React.FC = () => {
 };
 
 export default Header;
-

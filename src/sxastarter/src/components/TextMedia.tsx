@@ -114,4 +114,3 @@ const TextMediaBanner = ({ fields }: TextMediaBannerProps) => {
 };
 
 export default TextMediaBanner;
-
