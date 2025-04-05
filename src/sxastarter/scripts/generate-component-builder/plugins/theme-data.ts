@@ -1,7 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { ComponentBuilderPlugin, ComponentBuilderPluginConfig } from '..';
-import config from 'temp/config';
 import path from 'path';
 import fs from 'fs';
 import graphqlClientFactory from 'lib/graphql-client-factory';
@@ -17,7 +16,7 @@ class ThemeDataPlugin implements ComponentBuilderPlugin {
     gqlClient
       .request(
         `query {
-        item(language:"en",path:"/sitecore/content/XMCHackoholics/${config.sitecoreSiteName}/Settings/Theme/ThemeStyle"){
+        item(language:"en",path:"/sitecore/content/XMCHackoholics/${process.env.SITECORE_SITE_NAME}/Settings/Theme/ThemeStyle"){
             fields{
             name
             jsonValue
@@ -26,7 +25,6 @@ class ThemeDataPlugin implements ComponentBuilderPlugin {
         }`
       )
       .then((res: any) => {
-        console.log('SITENAME', res);
         const themeSettingsJson = res?.item?.fields;
         const themeData = themeSettingsJson.find((x: { name: string }) => x.name == 'Theme');
         const globalData = themeSettingsJson.find((x: { name: string }) => x.name == 'Json');
