@@ -29,9 +29,7 @@ class ThemeDataPlugin implements ConfigPlugin {
           const themeSettingsJson = res?.item?.fields;
           const themeData = themeSettingsJson.find((x: { name: string }) => x.name == 'Theme');
           const globalData = themeSettingsJson.find((x: { name: string }) => x.name == 'Json');
-          let rawData = themeData?.jsonValue?.fields?.Json?.value
-            ? themeData?.jsonValue?.fields?.Json?.value.replace(/'/g, '"')
-            : globalData?.jsonValue?.fields?.Json?.value.replace(/'/g, '"') || {};
+          let rawData = { ...themeData, ...globalData };
           // Step 2: Ensure property names are wrapped in double quotes
           rawData = rawData.replace(/(\w+):/g, '"$1":'); // This will replace `key:` with `"key":`
           // Step 3: Remove trailing commas (commas before closing braces or brackets)
