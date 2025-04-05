@@ -17,7 +17,7 @@ class ThemeDataPlugin implements ConfigPlugin {
       await clGraph({})
         .request(
           `query {
-        item(language:"en",path:"/sitecore/content/XMCHackoholics/${process.env.SITECORE_SITE_NAME}/Settings/Theme/ThemeStyle"){
+        item(language:"en",path:"/sitecore/content/XMCHackoholics/${config.sitecoreSiteName}/Settings/Theme/ThemeStyle"){
             fields{
             name
             jsonValue
