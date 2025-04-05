@@ -22,11 +22,11 @@ const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="w-full bg-[#350078]">
+    <header className="w-full bg-primary1">
       <div className="max-w-[1280px] mx-auto flex justify-between items-center py-12 px-8">
         {/* Logo */}
         <div className="flex items-center space-x-2">
-          <span className="text-white text-[22px] font-extrabold tracking-wide font-monteserrate">
+          <span className="text-neutral1 text-[22px] font-extrabold tracking-wide font-monteserrate">
             Hackholics 1
           </span>
         </div>
@@ -37,7 +37,7 @@ const Header: React.FC = () => {
             <a
               key={item.id}
               href={item.url}
-              className="text-white text-[16px] font-semibold no-underline font-monteserrate"
+              className="text-neutral1 text-[16px] font-semibold no-underline font-monteserrate"
             >
               {item.title}
             </a>
@@ -46,7 +46,7 @@ const Header: React.FC = () => {
 
         {/* Mobile Menu Icon */}
         <button
-          className="md:hidden text-white focus:outline-none"
+          className="md:hidden text-neutral1 focus:outline-none"
           onClick={() => setIsOpen(!isOpen)}
         >
           <MdOutlineSegment className="w-12 h-12" />
@@ -56,20 +56,20 @@ const Header: React.FC = () => {
       {/* Mobile Full-Width Menu (Mapped from Sitecore) */}
       {isOpen && (
         <div>
-          <div className="fixed inset-0 bg-[#350078] flex flex-col items-center justify-center space-y-6 z-50">
+          <div className="fixed inset-0 bg-primary1 flex flex-col items-center justify-center space-y-6 z-50">
             <nav className="flex flex-col space-y-6 text-center">
               {sitecoreNavData.map((item) => (
                 <a
                   key={item.id}
                   href={item.url}
-                  className="text-white text-2xl font-semibold no-underline font-monteserrate"
+                  className="text-neutral1 text-2xl font-semibold no-underline font-monteserrate"
                 >
                   {item.title}
                 </a>
               ))}
             </nav>
             <button
-              className="text-white text-lg font-medium mt-6"
+              className="text-neutral1 text-lg font-medium mt-6"
               onClick={() => setIsOpen(false)}
             >
               <IoMdClose className="w-12 h-12" />

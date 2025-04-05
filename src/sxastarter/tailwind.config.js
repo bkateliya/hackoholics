@@ -12,7 +12,15 @@ module.exports = {
         xs: '375px',
       },
       colors: {
-        colorprimary: 'var(--main-bg-color, #ff0000)',
+        primary1: '#350078',
+        neutral1: "#FFFFFF",
+        neutral6: "#000000",
+        gray9: "#111827",
+        gray7: "#374151",
+        gray6: '#4b5563',
+        gray3: "#d1d5db",
+        gray5: "#6b7280",
+        gray2: "#e5e7eb",
       },
       fontFamily: {
         monteserrate: ['"Montserrat"', "sans-serif"]
