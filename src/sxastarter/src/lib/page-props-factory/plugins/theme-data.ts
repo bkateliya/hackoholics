@@ -61,6 +61,26 @@ class ThemeDataPlugin implements Plugin {
 
       // Step 7: Write the formatted JSON data to the file
       fs.writeFileSync(configPath, configData);
+
+      // generate-tailwind-config.js
+
+      // Example of dynamic Tailwind configuration
+      const tailwindConfig = {
+        content: ['./src/**/*.{js,ts,jsx,tsx}'],
+
+        theme: {
+          extend: themeSettings,
+        },
+        plugins: [],
+      };
+
+      // Define the path to save the Tailwind config
+      const configPath2 = path.resolve(process.cwd(), 'tailwind.config.js');
+
+      // Write the config data to a JavaScript file
+      fs.writeFileSync(configPath2, `module.exports = ${JSON.stringify(tailwindConfig, null, 2)};`);
+
+      console.log('TEST');
     } catch (e) {
       console.log('FILE ERROR', e);
     }

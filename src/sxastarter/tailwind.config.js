@@ -1,15 +1,18 @@
-/** @type {import('tailwindcss').Config} */
-import path from 'path';
-import fs from 'fs';
-
-const configPath = path.resolve(process.cwd(), 'data', 'tailwind-config.json');
-const rawData = JSON.parse(fs.readFileSync(configPath, 'utf-8'));
-
 module.exports = {
-  content: ['./src/**/*.{js,ts,jsx,tsx}'],
-
-  theme: {
-    extend: rawData,
+  "content": [
+    "./src/**/*.{js,ts,jsx,tsx}"
+  ],
+  "theme": {
+    "extend": {
+      "colors": {
+        "custom-blue": "#D9E506",
+        "custom-green": "#38C172"
+      },
+      "fontSize": {
+        "xxl": "2rem",
+        "sm": "0.875rem"
+      }
+    }
   },
-  plugins: [],
+  "plugins": []
 };
